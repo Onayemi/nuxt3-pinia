@@ -1,0 +1,41 @@
+# Use the below command if you are using yarn as your package manager. 
+yarn generate
+
+# Use the below command if you are using npm as your package manager.
+npm run generate
+
+.htaccess
+
+# .htaccess file
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+
+container mx-auto
+container flex items-center justify-between py-6 mx-auto
+container mx-auto items-center flex justify-between space-x-4 py-6
+
+mt-8 grid lg:grid-cols-3 gap-6
+grid md:grid-cols-3
+col-span-1 col-span-2
+
+
+# https://pinia.vuejs.org/ssr/nuxt.html
+## Pinia Nuxt 3
+yarn add pinia @pinia/nuxt
+# or with npm
+npm install pinia @pinia/nuxt
+modules: [
+    '@pinia/nuxt',
+],
+
+# https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt-3.html
+
+npm i -D @pinia-plugin-persistedstate/nuxt
+modules: [
+    '@pinia-plugin-persistedstate/nuxt',
+],
